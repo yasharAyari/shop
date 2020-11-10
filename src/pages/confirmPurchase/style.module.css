@@ -1,0 +1,22 @@
+.wrapper{
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.terms {
+  line-height: 1.5em;
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 300px;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+.acceptButton, .declineButton {
+  margin: 20px 10px;
+}
+
+.declineButton {
+  background-color: #CB3842;
+}
