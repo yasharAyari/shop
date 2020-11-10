@@ -1,0 +1,43 @@
+.image{
+  width: 100%;
+}
+
+.wrapper{
+  padding: 0 16px;
+}
+
+.contentWrapper{
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  margin-bottom: 32px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+}
+
+.title{
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.headline{
+  font-size: 14px;
+}
+
+.footer{
+  font-size: 14px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.time{
+  color: #343434;
+  border-right: 1px solid rgb(232, 232, 232);
+  padding-right: 8px;
+  margin-right: 8px;
+}
+
+.calories{
+  color: #676767;
+}
