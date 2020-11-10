@@ -1,0 +1,7 @@
+{
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "rules": {
+    // I had to disable this eslint rule because the definition of that was not found
+    "jsx-a11y/href-no-hash": "off"
+  }
+}
