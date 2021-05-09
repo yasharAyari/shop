@@ -9,6 +9,7 @@ import Recipe from './recipe';
  */
 const OverView = () => {
   const [recipes, setRecipes] = useState([]);
+  const [query, setQuery] = useState('');
 
   // load the list of recipes
   useEffect(() => {
@@ -16,6 +17,7 @@ const OverView = () => {
       .then(({ data }) => setRecipes(data || []))
       .catch(error => console.error(error));
   }, []);
+
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
@@ -24,11 +26,20 @@ const OverView = () => {
           Fresh off the chopping block! Enjoy the latest and greatest recipes
           carefully curated by our 5-star chefs.
         </p>
+        <input
+          type="text"
+          className={styles.search}
+          placeholder="search for a recipe"
+          onChange={({ target }) => setQuery(target.value)}
+        />
+        <div>{query}</div>
       </header>
       <Row>
-        {recipes.map(item => (
-          <Recipe key={item.id} data={item} />
-        ))}
+        {recipes
+          .filter(item => item.name.toLowerCase().includes(query))
+          .map(item => (
+            <Recipe key={item.id} data={item} />
+          ))}
       </Row>
     </div>
   );
